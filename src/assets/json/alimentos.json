@@ -1,0 +1,36 @@
+[
+    {
+        "id":"1",
+        "nombre":"Proteinas",
+        "imagen":"proteina.jpeg",
+        "descripcion":"Son el principal componente estructural de las células y los tejidos, constituyen la mayor parte de la sustancia de los músculos y órganos, después del agua. Están formadas por miles de aminoácidos que se unen mediante cadenas, existen veinte tipos de aminoácidos los que producen diferentes combinaciones determinando la estructura tridimensional única de cada proteína y su función específica."
+    },
+        
+    {
+        "id":"2",
+        "nombre":"Grasas",
+        "imagen":"grasas.jpg",
+        "descripcion":"Son el nutriente energético por excelencia. Este grupo está formado por los triglicéridos, los fosfolípidos y el colesterol. Constituyen el 30-35% de una dieta equilibrada. La mayoría de las grasas que consumimos son triglicéridos, que una vez digeridos, liberan ácidos grasos."
+    },
+
+    {
+        "id":"3",
+        "nombre":"Carbohidratos",
+        "imagen":"carbohidratos.jpg",
+        "descripcion":"También conocidos como hidratos de carbono, son los mayores dadores de energía nuestras células y de gran manera al cerebro, se dividen en 2 categorías: simples y complejos, se diferencian en su estructura y como se metabolizan en nuestro organismo. Los carbohidratos se almacenan de dos formas en el cuerpo: como glucógeno en el hígado (esto representa 1/3 del total) y en los músculos del esqueleto (2/3 del total). Se recomienda que la ingesta de carbohidratos no supere la mitad de la ingesta total diaria."
+    },
+
+    {
+        "id":"4",
+        "nombre":"Vitaminas",
+        "imagen":"vitaminas.png",
+        "descripcion":"Las vitaminas son un grupo de sustancias que son necesarias para el funcionamiento celular, el crecimiento y el desarrollo normales. Existen 13 vitaminas esenciales. Por lo cual debemos procurar consumir todos los tipos para que el cuerpo funcione apropiadamente."
+    },
+
+    {
+        "id":"5",
+        "nombre":"Minerales",
+        "imagen":"minerales.png",
+        "descripcion":"Son sustancias con una importante función reguladora, que no pueden ser sintetizados por el organismo y deben ser aportados por la dieta. No aportan energía. Los minerales están ampliamente distribuidos en alimentos y son relativamente resistentes a los tratamientos tecnológicos y culinarios. No les afecta la luz y el calor, pero se pueden perder en los lixiviados, en las aguas de cocción, retenidos en la fibra que no se absorbe, etc."
+    }
+]

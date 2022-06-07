@@ -1,0 +1,26 @@
+<div class="calculadora" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <form class="imc" [formGroup]="imc" (ngSubmit)="calcular()">
+          <div class="mb-3">
+            <label for="peso" class="form-label" formControlName="peso">Peso(Kg)</label>
+            <input type="number" class="form-control" id="peso" formControlName="peso">
+          </div>
+          <div class="mb-3">
+            <label for="estatura" class="form-label" formControlName="estatura">Estatura(Cm)</label>
+            <input type="number" class="form-control" id="estatura" formControlName="estatura" >
+          </div>
+        </form>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <p class="card-text text-center">Calcular IMC:</p>
+          <fieldset disabled class="text-center">
+            <div class="mb-3">
+              <input type="text" id="display" placeholder={{calcular()}}>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+</div>

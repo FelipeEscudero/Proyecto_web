@@ -1,0 +1,9 @@
+<div class="card-group">
+  <div class="card" *ngFor="let alimento of alimentos">
+    <img class="card-img-top" data-src="holder.js/100px180/" src="../../assets/{{alimento.imagen}}" data-holder-rendered="true" style="max-height: 100%; width: 100%; display: block;">
+    <div class="card-body">
+      <h5 class="card-title">{{alimento.nombre}}</h5>
+      <p class="card-text">{{alimento.descripcion}}</p>
+    </div>
+  </div>
+</div>

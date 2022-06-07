@@ -1,0 +1,158 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fluid">
+  <div class="container-fluid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-right" viewBox="0 0 16 16"data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+      <path fill-rule="evenodd" d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8zm-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5z"/>
+    </svg>
+    <a routerLink="/"><img src="../../assets/logo.png" alt="" class="logo-img"></a>
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact">Contáctenos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="" data-bs-toggle="modal" data-bs-target="#profile" data-bs-whatever="@mdo">Perfil</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="offcanvas offcanvas-start hide" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" aria-modal="true" role="dialog" style="visibility: visible;">
+  <div class="offcanvas-header">
+    <img src="../../assets/logo.png" alt="" class="img-fluid">
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+      <nav class="list-group">
+        <a routerLink="/" class="list-group-item list-group-item-action" title="home">Inicio</a>
+        <a routerLink="/calculadora" class="list-group-item list-group-item-action" title="calculadora_imc">Calcular IMC</a>
+        <a routerLink="/alimentos" class="list-group-item list-group-item-action" title="alimentos">Info de alimentos</a>
+        <a routerLink="/ejercicios" class="list-group-item list-group-item-action" title="ejercicios">Ejercicios recomendados</a>
+        <!--
+        <a routerLink="/plan-alimenticio" class="list-group-item list-group-item-action" title="ingresar">Ingresar plan alimenticio</a>
+        -->
+      </nav>
+    </div>
+  </div>
+</div>
+<!--perfil-->
+<div class="modal fade" id="profile" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabel">Perfil</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3" id="mb-3">
+            <img src="../../assets/perfil.png" class="img">
+            <fieldset disabled>
+              <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" placeholder= '{{formulario.get("name")?.value}}'>
+              </div>
+              <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">Apellido:</label>
+                <input type="text" class="form-control" placeholder='{{formulario.get("lastName")?.value}}'>
+              </div>
+              <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">Correo electrónico:</label>
+                <input type="text" class="form-control" placeholder='{{formulario.get("email")?.value}}'>
+              </div>
+            </fieldset>
+            <p><a routerLink="" data-bs-toggle="modal" data-bs-target="#loggin" data-bs-whatever="@mdo">Iniciar sesión.</a></p>
+            <p>¿No tienes una cuenta?<a routerLink="" data-bs-toggle="modal" data-bs-target="#register" data-bs-whatever="@mdo">Registráte.</a></p>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Enviar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Iniciar sesión-->
+<div class="modal fade" id="loggin" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabel">Iniciar sesión</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="row g-3 needs-validation">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Recuérdame</label>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Enviar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Registro-->
+<div class="modal fade" id="register" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabel">Regístrate</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formulario" (ngSubmit)="validacion()">
+          <div class="mb-3 position-relative">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="name" formControlName="name" value="" >
+            <div *ngIf="formulario.controls['name'].invalid && (formulario.controls['name'].dirty || formulario.controls['name'].touched )" class="alert alert-danger">
+              Debe rellenar este campo!
+            </div>
+          </div>
+          <div class="mb-3 position-relative">
+            <label for="lastName" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="lastName" formControlName="lastName" value="" >
+            <div class="invalid-feedback">Debe rellenar este campo!</div>
+            <div class="valid-feedback">Correcto.</div>
+          </div>
+          <div class="mb-3 position-relative">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="text" class="form-control" id="email" formControlName="email" >
+            <div class="invalid-feedback">Debe rellenar este campo!</div>
+            <div class="valid-feedback">Correcto.</div>
+          </div>
+          <div class="mb-3 position-relative">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="password" formControlName="password" >
+            <div class="invalid-feedback">Debe rellenar este campo!</div>
+            <div class="valid-feedback">Correcto.</div>
+          </div>
+          <p>Ya tienes una cuenta? <a href="/profile" data-bs-toggle="modal" data-bs-target="#loggin" data-bs-whatever="@mdo">Iniciar sesion</a></p>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" [disabled]="!formulario.valid" id="enviar" class="btn btn-primary" data-bs-dismiss="modal">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>  
