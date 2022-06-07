@@ -1,4 +1,4 @@
-# proyecto_web_v3
+# Proyecto_web
 Integrantes:
 Felipe Escudero
 Lucas Miranda
